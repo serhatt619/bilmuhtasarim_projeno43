@@ -1,16 +1,34 @@
-## Okıyıcı Sistemi Çalışma Akışı
+# Okıyıcı — Arayüz Ön Prototipi
 
-Okıyıcı, ürün etiketlerindeki barkod bilgisini kullanarak ürün bilgilerine erişmeyi amaçlayan bir uygulamadır. Aşağıdaki şema, sistemin planlanan temel çalışma akışını göstermektedir.
+Bu dal, **Okıyıcı ürün etiketi okuma uygulamasının başlangıç arayüzünü ve temel çalışma akışını** içermektedir.
 
-![Okıyıcı Sistemi Çalışma Akışı](docs/okiyici-calisma-akisi.png)
+## Mevcut Özellikler
 
-### Temel işlem adımları
+- Barkod numarasını manuel olarak girme
+- Örnek ürün verileri üzerinden sorgulama yapma
+- Ürün adı, kategorisi, fiyatı ve stok durumunu görüntüleme
+- Ürün bulunamadığında uyarı gösterme
+- Son sorgulamaları listeleme ve sorgu geçmişini temizleme
+- Mobil ekranlara uyumlu kullanıcı arayüzü
 
-1. Barkod numarası manuel olarak girilir veya barkod okuyucu ile alınır.
-2. Girilen barkod bilgisi kontrol edilir.
-3. Ürün, veritabanında barkod numarasına göre sorgulanır.
-4. Ürün bulunursa bilgileri kullanıcıya gösterilir; bulunamazsa uyarı verilir.
-5. Sorgulama sonucu geçmiş kayıtlarına eklenir.
+## Teknolojiler
 
-> **Geliştirme durumu:** Bu şema hedeflenen sistem akışını göstermektedir. Kamera ile barkod okuma, API ve veritabanı entegrasyonları geliştirme aşamalarında tamamlanacaktır.
- 
+- HTML
+- CSS
+- JavaScript
+
+## Çalıştırma
+
+`frontend/index.html` dosyasını bir web tarayıcısında açarak prototipi çalıştırabilirsiniz.
+
+Örnek barkodlar:
+
+- `8690000000001`
+- `8690000000002`
+- `1234567890123` — bulunamayan ürün senaryosu
+
+## Geliştirme Durumu
+
+Bu sürüm, kullanıcı arayüzünü ve temel sorgulama akışını göstermek amacıyla hazırlanmış bir ön prototiptir. Ürün bilgileri örnek verilerden alınmaktadır. Kamera ile barkod okuma, OpenCV/PyZbar entegrasyonu, REST API ve SQLite veritabanı bağlantısı henüz tamamlanmamıştır.
+
+Bu dal, sonraki geliştirme aşamalarında gerçek ürün verileri ve barkod okuma bileşenleriyle genişletilmek üzere hazırlanmıştır.
